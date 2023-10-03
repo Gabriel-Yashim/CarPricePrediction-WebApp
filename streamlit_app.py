@@ -10,7 +10,7 @@ import pickle
 import streamlit as st
 
 
-model = pickle.load(open('GradientBoost.pkl', 'rb'))
+model = pickle.load(open('C:/Users/SHOPINVERSE/Documents/GitHub/CarPricePrediction-WebApp/GradientBoost.pkl', 'rb'))
 
 
 st.title('Car Price Prediction System')
@@ -18,7 +18,7 @@ html_temp = """
     <h3 style="color:white;text-align:center;">By Gabriel Yashim</h3>
     <div style="background-color:pearl;padding:10px;margin-bottom:3rem">
         <p style="text-align:justify;">
-            Welcome to this simple Car Price Prediction System. The system can predict the price of a car (on Million ₦) given some features. <br>
+            Welcome to this simple Car Price Prediction System. The system can predict the price of a car (in Million ₦) given some features. <br>
             The objective is to predict the price (Amount (Million Naira) the company should sell a car based on the available data (Location, Maker, Model, Year, Colour, Amount (Million Naira), Type, Distance). The objective is the predict the selling price.
         </p>  
     </div>
@@ -152,7 +152,7 @@ result = ''
 if st.button('Submit'):
     pred = model.predict([[location_value, maker_value, year, color_value, type_value, distance]])
         
-    st.write(f"The is worth ₦{pred[0]:.2f} million")
+    st.write(f"The is worth  ₦{pred[0]:.2f} million")
     
 
 
