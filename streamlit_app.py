@@ -10,7 +10,7 @@ import pickle
 import streamlit as st
 
 
-model = pickle.load(open('GradientBoost.pkl', 'rb'))
+model = pickle.load(open('RandomForest.pkl', 'rb'))
 
 
 st.title('Car Price Prediction System')
